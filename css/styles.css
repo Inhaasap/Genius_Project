@@ -3,6 +3,7 @@
   --color-primary-dark: #31261a;
   --color-brand-light: #819b57;
   --color-brand-dark: #465929;
+  --color-text-modal: #a18268;
 }
 
 /* Base */
@@ -34,7 +35,7 @@ ul {
 }
 
 .link:hover {
-  color: var(--color-brand);
+  color: var(--color-brand-dark);
 }
 
 /* Hero section */
@@ -44,7 +45,7 @@ ul {
 }
 
 .hero-title .accent {
-  color: var(--color-brand);
+  color: var(--color-brand-light);
 }
 
 /* Advantage section */
@@ -56,4 +57,18 @@ ul {
 
 .section-title .accent {
   color: var(--color-brand-dark);
+}
+
+.accent {
+  color: var(--color-brand-light);
+}
+
+/* footer */
+
+.footer {
+  color: var(--color-primary-light);
+}
+
+.footer-text {
+  color: var(--color-text-modal);
 }
