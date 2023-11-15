@@ -42,6 +42,11 @@ body {
   font-weight: 400;
   line-height: calc(27 / 18);
 }
+
+* {
+  box-sizing: border-box;
+}
+
 address {
   font-style: normal;
 }
@@ -79,6 +84,10 @@ ul {
 }
 
 /* Hero section */
+
+.hero-section {
+  padding: 272px 0;
+}
 
 .hero-title {
   color: var(--color-primary-light);
@@ -146,10 +155,6 @@ ul {
 }
 
 /* footer */
-
-.footer {
-  color: var(--color-primary-light);
-}
 
 .address-link {
   color: var(--color-primary-light);
