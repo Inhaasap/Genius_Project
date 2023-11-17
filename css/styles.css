@@ -42,6 +42,11 @@
 }
 
 /* Base */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
   color: var(--color-primary-dark);
@@ -62,8 +67,8 @@ h6 {
   margin-top: 0;
 }
 
-* {
-  box-sizing: border-box;
+a {
+  display: inline-block;
 }
 
 address {
@@ -258,7 +263,8 @@ ul {
 
 .chefs-list {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 40px 30px;
 }
 
 .chefs-item {
@@ -281,8 +287,13 @@ ul {
   font-weight: 600;
 }
 
-/* .chef-text {
-} */
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
 
 /* Format section */
 
@@ -376,12 +387,14 @@ ul {
 /* Footer */
 .footer-container {
   display: flex;
+  gap: 20px;
 }
 
 .footer-nav,
 .footer-address {
   flex-basis: 50%;
   display: flex;
+  gap: 20px;
 }
 
 .footer-logo,
@@ -391,6 +404,7 @@ ul {
 }
 
 .footer {
+  padding: 32px 0;
   background-image: url(../images/footer-background.png);
   background-color: var(--color-primary-dark);
   background-repeat: no-repeat;
