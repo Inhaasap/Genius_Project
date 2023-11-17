@@ -321,9 +321,6 @@ ul {
   cursor: pointer;
 }
 
-.carousel-icon {
-}
-
 .carousel-button:hover {
   background-color: var(--color-primary-dark);
   fill: var(--color-primary-light);
