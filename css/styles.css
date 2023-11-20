@@ -131,7 +131,7 @@ ul {
 /* Header */
 
 .header {
-  background-color: #cfcfbc;
+  background-color: #ddddd9;
 }
 
 .header-container {
@@ -249,16 +249,26 @@ ul {
 /* Chef section */
 
 .chefs-title {
-  max-width: 520px;
   margin: 0 auto 80px;
+  position: relative;
 }
 
 .chefs-title::before,
 .chefs-title::after {
-  display: block;
+  position: absolute;
+  bottom: 24px;
+  /* display: block; */
   width: 352px;
   border: 2px solid var(--color-brand-light);
   content: "";
+}
+
+.chefs-title::before {
+  left: 0;
+}
+
+.chefs-title::after {
+  right: 0;
 }
 
 .chefs-list {
@@ -371,9 +381,6 @@ ul {
   gap: 32px;
 }
 
-.contact-form {
-}
-
 .contact-title {
   margin-bottom: 16px;
 }
@@ -385,6 +392,39 @@ ul {
 }
 
 /* Footer */
+
+.footer {
+  position: relative;
+  padding: 32px 0;
+  background-image: url(../images/footer-background.png);
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.footer::before {
+  width: 180px;
+  height: 120px;
+  left: 0;
+  background-image: url(../images/decor-bread-small.png);
+}
+
+.footer::after {
+  width: 380px;
+  height: 190px;
+  right: 0;
+  background-image: url(../images/decor-bread-large.png);
+}
+
 .footer-container {
   display: flex;
   gap: 20px;
@@ -401,15 +441,6 @@ ul {
 .footer-menu,
 .address-list {
   flex-grow: 1;
-}
-
-.footer {
-  padding: 32px 0;
-  background-image: url(../images/footer-background.png);
-  background-color: var(--color-primary-dark);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .address-link {
@@ -433,4 +464,38 @@ ul {
 
 .address-icon:hover {
   fill: var(--color-brand-normal);
+}
+
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: centre;
+  justify-content: center;
+  background-color: #868682;
+}
+
+.modal {
+  position: relative;
+  width: 880px;
+  height: 880px;
+  background-color: var(--color-primary-light);
+  border-radius: 30px;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
