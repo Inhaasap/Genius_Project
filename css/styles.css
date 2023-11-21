@@ -104,7 +104,7 @@ ul {
 
 .button {
   padding: 16px 32px;
-  color: #faf4ea;
+  color: var(--color-primary-light);
   background-color: var(--color-brand-normal);
   border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
@@ -114,7 +114,7 @@ ul {
 }
 
 .button:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-brand-dark);
   background-color: transparent;
 }
 
