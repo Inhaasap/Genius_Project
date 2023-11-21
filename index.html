@@ -203,6 +203,7 @@
                     type="text"
                     id="user-name"
                     name="user-name"
+                    required
                   />
                   <label class="form-label" for="user-name">Ім'я</label>
                 </div>
@@ -213,6 +214,7 @@
                     type="tel"
                     id="user-phone"
                     name="user-phone"
+                    required
                   />
                   <label class="form-label" for="user-phone">Телефон</label>
                 </div>
@@ -223,13 +225,14 @@
                     type="email"
                     id="user-email"
                     name="user-email"
+                    required
                   />
                   <label class="form-label" for="user-email"
                     >Електронна пошта</label
                   >
                 </div>
 
-                <button class="from-button button" type="submit">
+                <button class="form-button button" type="submit">
                   Замовити дзвінок
                 </button>
                 <p class="form-terms">
@@ -320,7 +323,7 @@
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
 
-        <form name="modal-form" autocomplete="off" novalidate>
+        <form name="modal-form" autocomplete="off">
           <h2>Замовити дзвінок</h2>
           <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
           <div class="form-field">
@@ -329,8 +332,14 @@
               type="text"
               id="user-name"
               name="user-name"
+              placeholder="Ім'я"
+              minlength="2"
+              maxlength="20"
+              required
             />
-            <label class="form-label" for="user-name">Ім'я</label>
+            <label class="form-label visually-hidden" for="user-name"
+              >Ім'я</label
+            >
           </div>
 
           <div class="form-field">
@@ -339,8 +348,14 @@
               type="tel"
               id="user-phone"
               name="user-phone"
+              placeholder="Телефон"
+              minlength="13"
+              maxlength="13"
+              required
             />
-            <label class="form-label" for="user-phone">Телефон</label>
+            <label class="form-label visually-hidden" for="user-phone"
+              >Телефон</label
+            >
           </div>
 
           <div class="form-field">
@@ -349,11 +364,15 @@
               type="email"
               id="user-email"
               name="user-email"
+              placeholder="Електронна пошта"
+              required
             />
-            <label class="form-label" for="user-email">Електронна пошта</label>
+            <label class="form-label visually-hidden" for="user-email"
+              >Електронна пошта</label
+            >
           </div>
 
-          <button class="from-button button" type="submit">
+          <button class="form-button button" type="submit">
             Замовити дзвінок
           </button>
           <p class="form-terms">
